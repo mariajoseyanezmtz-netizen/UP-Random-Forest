@@ -5,7 +5,6 @@
 
 from pathlib import Path
 import io
-import joblib
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -185,6 +184,7 @@ def train_random_forest(df):
 
 def save_model(pipeline, path="random_forest_tension_liquidez.pkl"):
     """Guarda el pipeline entrenado."""
+    import joblib
     joblib.dump(pipeline, path)
 
 
